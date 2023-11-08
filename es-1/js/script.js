@@ -19,7 +19,7 @@ let lightestBike = bike[0];
 bike.forEach(curBike => {
     const {name, weight} = curBike;
     console.log(curBike, name);
-    curBike.weight < lightestBike.weight ? lightestBike = curBike : "";
+    weight < lightestBike.weight ? lightestBike = curBike : "";
 });
 
 console.log(lightestBike);
