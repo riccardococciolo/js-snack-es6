@@ -1,21 +1,30 @@
 const bike = [
 {
-    nome: "yellow",
-    peso: 10,
+    name: "yellow",
+    weight: 10,
 },
 {
-    nome: "green",
-    peso: 16,
+    name: "green",
+    weight: 16,
 },
 {
-    nome: "red",
-    peso: 8,
+    name: "red",
+    weight: 8,
 }];
 
 console.log(bike);
 
+let lightestBike = bike[0];
+
 bike.forEach(curBike => {
-    const {nome, peso} = curBike;
-    console.log(curBike, nome);
+    const {name, weight} = curBike;
+    console.log(curBike, name);
+    curBike.weight < lightestBike.weight ? lightestBike = curBike : "";
 });
+
+console.log(lightestBike);
+
+let message = `La bici ${lightestBike.name} é la più leggera con ${lightestBike.weight}kg.`;
+
+document.getElementById("bikeMessage").innerHTML = message;
 
